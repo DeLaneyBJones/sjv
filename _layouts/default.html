@@ -1,0 +1,21 @@
+---
+layout: default
+header: this is a header for the intro
+subHeader: this is a subheader for the intro
+sectionImage: this is a featured image
+sectionImageAlt: this is the image alternative
+sectionVideo: video url
+---
+
+<div class="default">
+    <h1 class="t-secondary">{{page.header}}</h1>
+    <h2 class="t-primary">{{page.subheader}}</h2>
+    <img src="{{page.sectionImage}}" alt="{{page.sectionImageAlt}}">
+    <p>{{page.content}}</p>
+
+    <div>
+        {%- if page.sectionVideo -%}
+            <iframe width="557" height="418" src="{{page.sectionVideo}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {%- endif -%}
+    </div>
+</div>

@@ -1,0 +1,32 @@
+---
+layout: rows
+order: 4
+header: This is a header
+subHeader: This is a sub header
+sectionContent: [   ["name", "image src", "content"]...]
+---
+
+<div class="rows">
+    <h1 class="t-secondary">{{page.header}}</h1>
+    <div class="container">
+        {%- if page.sectionContent -%}
+                {%- for content in page.sectionContent -%}
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="row">
+                            <img src="{{content[1]}}">
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <h2 class="t-primary content">{{content[0]}}</h2>
+                        </div>
+                        <div class="row">
+                            <p>{{content[2]}}</p>
+                        </div>
+                    </div>
+                </div>
+                {%- endfor -%}
+        {%- endif -%}
+    </div>
+</div>

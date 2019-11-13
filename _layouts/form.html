@@ -1,0 +1,142 @@
+---
+layout: form
+order: 9
+header: Contact Us
+slides: [
+            ["Contact Us",
+                ["message","textarea"],
+                ["submit","button"],
+                ["reset", "radio"]
+            ]
+        ]
+---
+
+<div class="formTemplate container needs-validation" novalidate>
+    <h1 class="t-secondary">{{page.header}}</h1>
+    <form class="form form-horizontal">
+        {%- if page.slides -%}
+            {%- for content in page.slides -%}
+                <h2 class="t-primary">{{content[0]}}</h2>
+                {%- for data in content -%}
+                    {%- if !data[0] -%}
+                        <!--Here we have the different viewed sections. How can I make this work?-->
+                        <!--Form Drop Down-->
+                        {%- if (data[1] == "select") -%}
+                            <div class="form-group">
+                                <div class="section-content form-group row">
+                                    <label for="{{data[1]}}">{{data[0]}}</label>
+                                    {%- if data[2] -%}
+                                        <div class="col-sm-6">
+                                            <select class="form-control" id="sel1" required>
+                                                {%- for value in data[2] -%}
+                                                    <option placeholder="{{data[0]}}" class="col-sm-6 is-valid" id="{{data[1]}}" required>{{value}}</option>
+                                                {%- endfor -%}
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Not there yet...
+                                                </div>
+                                            </select>
+                                        </div>
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                        {%- endif -%}
+
+                        <!--This is for the text area-->
+                        {%- if data[1] == "textarea" -%}
+                            <div class="section-content form-group">
+                                <textarea class="col-sm-12 form-control" placeholder="{{data[0]}}" required></textarea>
+                            </div>
+                        {%-endif -%}
+                        
+
+
+<!--
+                        <p>
+                            <button class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Button with data-target
+                            </button>
+                        </p>
+                    -->
+
+
+                        <!--And this is for radio buttons-->
+                        {%- if (data[1] == "radio") -%}
+                            <div class="section-content form-group row form-check form-check-inline">
+                                <label for="{{data[1]}}">{{data[0]}}</label>
+                                <input type="radio" name="data[0]" class="col-sm-12" data-toggle="collapse" data-target="#creditInfo" aria-controls="creditInfo" required>
+                                <!--So now how do I activate it only on the credit radio button?-->
+                                    <div class="col-sm-12 collapse" id="creditInfo">
+                                        <h2 class="t-primary">{{data[2][0]}}</h2>
+                                        {%- if (data[2]) -%}
+                                            {%- for value in data[2] -%}
+                                                {%- if value[2] -%}
+                                                    <div>
+                                                        <select class="form-control" required>
+                                                            {%- for data in value[2] -%}
+                                                                <option required>{{data}}</option>
+                                                            {%- endfor -%}
+                                                        </select>
+                                                    </div>
+                                                {%- endif -%}
+                                                <div class="section-content form-group row">
+                                                    {%- if !value[0] -%}
+                                                        <input type="{{value[1][0]}}" id="{{value[1]}}" class="col-sm-6 form-control" placeholder="{{value[0]}}" required>
+                                                    {%- endif -%}
+                                                </div>
+                                                
+                                            {%- endfor -%}
+                                        {%- endif -%}
+                                    </div>
+                            </div>   
+                        {%- endif -%}
+
+                        <!--And this section is for all other types of form input-->
+                        {%- if (data[1] != "radio") -%}
+                            {%- if data[1] != "select" -%}
+                                {%- if data[1] != "textarea" -%}
+                                    <div class="section-content form-group row">
+                                        <div class="col-sm-12">
+                                            <input type="{{data[1]}}" id="{{data[1]}}" placeholder="{{data[0]}}" class="col-sm-6 form-control" required>
+                                        </div>
+                                    </div>
+                                {%- endif -%}
+                            {%- endif -%}
+                        {%- endif -%}
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- endfor -%}
+        {%- endif -%}
+        <!--Here? Lets start by creating a continue button? -->
+        <!-- I want this to show up ONLY if this is not the last content page-->
+        <div class="section-content form-group row">
+            <label class=" col-sm-12" for="submit">
+                <button class="t-secondary b-primary btn">Submit</button>
+            </label>
+        </div>
+    </form>
+</div>
+
+<!--https://github.com/twbs/bootstrap/issues/26271-->
+<script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>

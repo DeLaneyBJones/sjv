@@ -1,0 +1,144 @@
+.b-primary {
+  background-color: 	#01B1C8 !important;
+}
+.b-secondary {
+  background-color: #C72191 !important;
+}
+.b-info {
+  background-color: #1d02cc !important;
+}
+.b-danger {
+  background-color: #c8014d !important;
+}
+.b-success {
+  background-color: #01c87c !important;
+}
+.b-warning {
+  background-color: #e73101 !important;
+}
+.b-dark {
+  background-color: rgb(24, 24, 24) !important;
+}
+.b-light {
+  background-color: #f2f2f2 !important;
+}
+.b-white {
+  background-color: #fffff0 !important;
+}
+
+.t-primary {
+  color: 	#01B1C8 !important;
+}
+.t-secondary {
+  color: #C72191 !important;
+}
+.t-info {
+  color: #1d02cc !important;
+}
+.t-danger {
+  color: #c8014d !important;
+}
+.t-success {
+  color: #01c87c !important;
+}
+.t-warning {
+  color: #e73101 !important;
+}
+.t-dark {
+  color: rgb(24, 24, 24) !important;
+}
+.t-light {
+  color: #f2f2f2 !important;
+}
+.t-white {
+  color: #fffff0 !important;
+}
+
+header {
+  background-color: pink;
+}
+header img{
+  float: left;
+  overflow: hidden;
+  width: 100%;
+}
+header .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: 	#C72191;
+}
+
+body{
+  background-color: #fffff0;
+}
+
+
+.default, .columns, .table, .rows, .section-content{
+  margin: 2em 5em 2em 5em;
+}
+
+.default h2, .columns h2, .table h2, .formTemplate h2{
+  font-size: larger;
+}
+
+.default img{
+  float: right;
+  padding-left: 3em;
+}
+
+.default div
+{
+  text-align: center;
+  margin: 2em;
+}
+
+.columns img
+{
+  width: 100%;
+  border: 0.25em solid #C72191;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.table, th, td {
+  border: none !important;
+}
+
+.under
+{
+  border-bottom: 0.1em solid #01B1C8 !important;
+}
+
+th {
+  color: #01B1C8;
+  font-size: 2em;
+}
+
+.rows img{
+  width: 100%;
+  border: 0.25em solid #C72191;
+  margin: 1em;
+  overflow: hidden;
+}
+.rows .content {
+  margin: 1em;
+}
+
+.form {
+  border: 0.25em dashed #01b1c8;
+  border-radius: 8px;
+  margin: 2em;
+  padding: 2em;
+}
+
+button{
+  font-size: 150%;
+}
+
+
+@import "bootstrap/scss/functions"; 
+@import "bootstrap/scss/variables";
+@import "bootstrap";

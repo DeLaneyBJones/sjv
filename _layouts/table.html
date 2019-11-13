@@ -1,0 +1,49 @@
+---
+layout: table
+order: #
+header: This is a header
+subHeader: This is a sub header
+sectionContent: [   ["header", "content"],...]
+sectionData: [   ["date", "speaker", "cost"],...]
+---
+<div class="container table">
+    <div class="row">
+        <div class="col-lg-6">
+            <div>
+                <h1 class="t-secondary">{{page.header}}</h1>
+                {%- if page.sectionContent -%}
+                    {%- for content in page.sectionContent -%}
+                        <h2 class="t-primary">{{content[0]}}</h2>
+                        <p>{{content[1]}}</p>
+                    {%- endfor -%}
+                {%- endif -%}
+            </div>  
+        </div>
+        <div class="col-lg-6">
+            <div>
+                <h1 class="t-secondary">{{page.subHeader}}</h1>
+                {%- if page.sectionData -%}
+                    <div>
+                        <table>
+                            <tr>
+                                <th>_______</th>
+                                <th>________</th>
+                                <th>______</th>
+                            </tr>
+                            {%- for content in page.sectionData -%}
+                                <tr>
+                                    <td class="under">{{content[0]}}</td>
+                                    <td class="under">{{content[1]}}</td>
+                                    <td class="under">{{content[2]}}</td>
+                                </tr>
+                            {%- endfor -%}
+                        </table>
+                    </div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+  
+    
+    
+</div>

@@ -1,0 +1,26 @@
+---
+layout: columns
+order: 4
+header: This is a header
+subHeader: This is a sub header
+sectionContent: [   ["month", "image src", "header", "content"],
+                    ["month", "image src", "header", "content"],
+                    ["month", "image src", "header", "content"],
+                    ["month", "image src", "header", "content"]
+                ]
+---
+
+<div class="container columns">
+    <h1 class="t-secondary">Upcoming Speakers</h1>
+    <div class="row">
+        {%- if page.sectionContent -%}
+                {%- for content in page.sectionContent -%}
+                    <div class="col-sm-3">
+                        <h2 class="t-primary">{{content[0]}} - {{content[2]}}</h2>
+                        <img src="{{content[1]}}" width="75em">
+                        <p>{{content[3]}}</p>
+                    </div>
+                {%- endfor -%}
+        {%- endif -%}
+    </div>
+</div>

@@ -1,0 +1,7 @@
+---
+layout: default
+order: 7
+header: Our History
+---
+
+Since its debut in 1969, Sesame Street had given Jim Henson's Muppet characters exposure; however, Henson began to perceive that he was becoming typecast as a children's entertainer. Subsequently, he began conceiving a programme for a more adult demographic. Two television specials, The Muppets Valentine Show (1974) and The Muppet Show: Sex and Violence (1975), were produced for ABC and are considered pilots for The Muppet Show. Neither of the two specials was ordered to series. However, the prime-time access rule was recently enacted, shifting the 7:30 to 8 pm ET slot from the networks to their affiliates. CBS became interested in Henson's series proposals and expressed intent to broadcast it weekly on its owned and operated stations.[citation needed] According to the original pitch reel, George Schlatter was originally involved.

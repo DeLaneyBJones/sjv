@@ -1,0 +1,6 @@
+---
+order: 10
+---
+<div class="b-primary footer-copyright text-center py-3">
+    <p class="t-secondary">© 2019 Fall CITPT-255</p>
+</div>

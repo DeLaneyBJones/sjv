@@ -1,0 +1,47 @@
+body { background: #ffffff; color: #000000; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+header { background-color: pink; }
+
+nav { background-color: seashell; }
+
+main { background-color: purple; }
+
+footer { background-color: green; }
+
+.bg-primary { background-color: #01B1C8 !important; }
+
+.bg-secondary { background-color: #c87c01 !important; }
+
+.bg-info { background-color: #1d02cc !important; }
+
+.bg-danger { background-color: #c8014d !important; }
+
+.bg-success { background-color: #01c87c !important; }
+
+.bg-warning { background-color: #e73101 !important; }
+
+.bg-dark { background-color: #181818 !important; }
+
+.bg-light { background-color: #f2f2f2 !important; }
+
+.bg-white { background-color: #fffff0 !important; }
+
+.text-primary { color: #01B1C8 !important; }
+
+.text-secondary { color: #c87c01 !important; }
+
+.text-info { color: #1d02cc !important; }
+
+.text-danger { color: #c8014d !important; }
+
+.text-success { color: #01c87c !important; }
+
+.text-warning { color: #e73101 !important; }
+
+.text-dark { color: #181818 !important; }
+
+.text-light { color: #f2f2f2 !important; }
+
+.text-white { color: #fffff0 !important; }
+
+/*# sourceMappingURL=main.css.map */
